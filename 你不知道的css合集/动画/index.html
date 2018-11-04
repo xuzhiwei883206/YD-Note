@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画效果</title>
+</head>
+<body>
+<div class="list">
+    <ul>
+        <li class="act"><div class="animationObj"></div></li>
+    </ul>
+</div>
+</body>
+<style>
+    .list ul{
+        width: 500px;
+        margin: 200px 0 0 0;
+    }
+
+    .list li{
+        height: 20px;
+        background-color:#ff0000;
+        width: 50%;
+        position: relative;
+    }
+    .list li .animationObj{
+        position:absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        animation: horizontal-animation 1.5s ease;
+    }
+    .list li.act .animationObj::before{
+        content:"";
+        display: inline-block;
+        background-color: blue;
+        width: 100%;
+        height: 100%;
+        border-radius:50%;
+        animation: vertical-animation 1.5s;
+        animation-timing-function: cubic-bezier(.46,.29,.87,.69);
+    }
+    @keyframes horizontal-animation{
+        0% {
+            transform: translateX(150px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes vertical-animation{
+        0% {
+            transform: translateY(-160px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+</style>
+</html>
