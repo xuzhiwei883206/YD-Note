@@ -1,0 +1,11 @@
+describe("测试基本函数的API",function(){
+    it("+1函数的应用",function(){
+        expect(window.add(1)).toBe(2);
+    })
+})
+describe("测试基本函数的API",function(){
+    it("+1函数if分支的的应用",function(){
+        expect(window.addIf(1)).toBe(2);
+        expect(window.addIf(0)).toBe(0);
+    })
+})
