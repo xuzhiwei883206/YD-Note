@@ -7,6 +7,8 @@
 
     > net start mysql
 
+    > 查看安装路径 : show variables like '%char%';
+
 2. 登陆mysql
 
     > 语法: mysql -u用户名 -p用户密码
@@ -41,7 +43,7 @@
 
         > use mysql;
 
-        > **show tables;**
+        > show tables;
 
     3. 显示数据表的结构：
 
@@ -68,6 +70,13 @@
     7. 显示表中的记录：
 
         > select * from 表名;
+
+    8. 增删改查
+        1. insert into table_name ( column_name1, column_name2,...column_name ) VALUES ( value1, value2,...value );
+        2. select column_name,column_name from table_name WHERE runoob_id=3;
+        3. update table_name SET column_name='new-value',column_name='new-value' WHERE runoob_id=3;
+        4. binary 区分大小写
+            > mysql> SELECT * from runoob_tbl WHERE BINARY runoob_author='runoob.com';
 
 5. 导出和导入数据
 
