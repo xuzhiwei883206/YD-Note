@@ -5,6 +5,10 @@
 #### 图片
 ![我是图片](https://webappcommon.oss-cn-beijing.aliyuncs.com/common/menuIcon4_act.png)
 
+
+#### 插入视频
+\<iframe width="560" height="315" src="https://www.youtube.com/embed/Ilg3gGewQ5U" frameborder="0" allowfullscreen></iframe>
+
 #### 无序列表
 * 无序1
 * 无序2
