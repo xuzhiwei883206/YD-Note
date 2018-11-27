@@ -1,6 +1,7 @@
 ## 单点登录（Single Sign On）
 https://www.cnblogs.com/EzrealLiu/p/5559255.html
 https://www.cnblogs.com/ywlaker/p/6113927.html
+
 > 简称为 SSO，是目前比较流行的企业业务整合的解决方案之一。SSO的定义是在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。
 
 ### 一、单系统登录机制
