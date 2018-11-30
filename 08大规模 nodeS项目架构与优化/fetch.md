@@ -18,8 +18,77 @@
 
 [fetch-jsonp]:https://github.com/camsong/fetch-jsonp
 - Fetch API 是基于 Promise 设计，有必要先学习一下 Promise，推荐阅读 [MDN Promise] 教程。旧浏览器不支持 Promise，需要使用 polyfill [es6-promise] 。
+
 - 本文不是 Fetch API 科普贴，其实是讲异步处理和 Promise 的。Fetch API 很简单，看文档很快就学会了。推荐 MDN Fetch 教程 和 万能的WHATWG Fetch 规范
 
+
+api使用： https://github.com/bitinn/node-fetch#json
+```
+const fetch = require('node-fetch');
+```
+Plain text or HTML
+```
+fetch('https://github.com/')
+    .then(res => res.text())
+    .then(body => console.log(body));
+```
+JSON
+```
+fetch('https://api.github.com/users/github')
+    .then(res => res.json())
+    .then(json => console.log(json));
+```
+Simple Post
+```
+fetch('https://httpbin.org/post', { method: 'POST', body: 'a=1' })
+    .then(res => res.json()) // expecting a json response
+    .then(json => console.log(json));
+```
+Post with JSON
+```
+const body = { a: 1 };
+
+fetch('https://httpbin.org/post', {
+        method: 'post',
+        body:    JSON.stringify(body),
+        headers: { 'Content-Type': 'application/json' },
+    })
+    .then(res => res.json())
+    .then(json => console.log(json));
+```
+Post with form parameters
+在7.5.0版的Node.js中有URLSearchParams。有关更多使用方法，请参见正式文档。注意：只有在给出URLSearchParams实例时，内容类型标头才会自动设置为x-www-form-urlencode：
+```
+const { URLSearchParams } = require('url');
+
+const params = new URLSearchParams();
+params.append('a', 1);
+
+fetch('https://httpbin.org/post', { method: 'POST', body: params })
+    .then(res => res.json())
+    .then(json => console.log(json));
+```
+Handling exceptions 处理异常
+注意：3xx-5xx响应不是例外，应该在随后的()中处理，参见下一节。在FETCH承诺链中添加一个CATCH将捕获所有异常，例如源自节点核心库的错误，如网络错误和操作错误，这些都是FetchError的实例。有关详细信息，请参阅错误处理文档。
+```
+fetch('https://domain.invalid/')
+    .catch(err => console.error(err));
+```
+Handling client and server errors处理客户端和服务器错误
+常见的做法是创建一个助手函数，以检查响应是否不包含客户端(4xx)或服务器(5xx)错误响应：
+```
+function checkStatus(res) {
+    if (res.ok) { // res.status >= 200 && res.status < 300
+        return res;
+    } else {
+        throw MyCustomError(res.statusText);
+    }
+}
+
+fetch('https://httpbin.org/status/400')
+    .then(checkStatus)
+    .then(res => console.log('will not get here...'))
+```
 ### Why Fetch
 XMLHttpRequest 是一个设计粗糙的 API，不符合关注分离（Separation of Concerns）的原则，配置和调用方式非常混乱，而且基于事件的异步模型写起来也没有现代的 Promise，generator/yield，async/await 友好。
 
