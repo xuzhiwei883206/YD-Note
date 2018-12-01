@@ -1,3 +1,5 @@
+参考：https://www.cnblogs.com/myzy/p/6515215.html
+
 1. 安装
     1. window(安装完ruby之后)
     > gem install sass

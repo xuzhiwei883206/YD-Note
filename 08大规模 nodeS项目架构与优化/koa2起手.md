@@ -132,3 +132,7 @@
 	- 创建一个deploy.js
 13. 建立config文件夹，在文件夹里面创建config.js的基本配置文件
 14. 建立routes文件夹，存放路由文件
+15. npm install --save koa-bodyparser 解析post参数
+16. npm install --save cross-env
+17. npm install lodash --save
+18. npm install log4js --save //日志
