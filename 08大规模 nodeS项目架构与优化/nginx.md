@@ -1,3 +1,4 @@
+
 #### 配置
 worker_processes
 > 操作系统启动多少个工作进程运行Nginx。注意是工作进程，不是有多少个nginx工程。在Nginx运行的时候，会启动两种进程，一种是主进程master process；一种是工作进程worker process。例如我在配置文件中将worker_processes设置为4，启动Nginx后，使用进程查看命令观察名字叫做nginx的进程信息，我会看到如下结果：
