@@ -1,10 +1,16 @@
 npm install webpack -g
-
+npm install --save-dev webpack
 npm install --save-dev webpack
 
-webpack webpack.config.js
+####配置package
+"prod": "webpack --mode production",
+"dev": "webpack --mode development"
+
+touch .babelrc
+npm install babel-preset-env --save-dev
 
 #### 配置
+webpack webpack.config.js
 - entry:配置入口资源
 - output:配置编译后的资源
 - module:资源处理
