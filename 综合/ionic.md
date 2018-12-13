@@ -25,7 +25,7 @@ ionic cordova emulate ios -lc //ios
 - 设置android sdk
 - 设置gradle 地址
 - 错误：Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.It will be removed at the end of 2018. For more information see: http://d.android.com/r/tools/update-dependency-configurations.html
-    > 将build.gradle(Module.app)中dependencies的compile换成implementation 即可
+    > 将build.gradle(Module.app)中dependencies的 compile 换成 implementation 即可
 
     > https://blog.csdn.net/bencheng06/article/details/82049055
 - ionic cordova build android 失败

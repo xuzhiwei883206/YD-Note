@@ -21,3 +21,5 @@ npm install html-webpack-plugin --save-dev
 npm install style-loader --save
 npm install css-loader --save
 npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
+
+npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用npm start就可以执行其对于的命令，如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name}如npm run build

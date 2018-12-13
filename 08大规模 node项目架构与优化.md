@@ -1,3 +1,9 @@
+#### 项目的四种进阶
+1. Vue-cli  -->  dist
+2. swig+Node
+3. vue+node (同构)
+4. 框架+node 用node实现真路由，框架是假路由(去模板法)
+
 #### 上线部署
 ps aux|grep node  //查看node进程谁在用
 lsof -i tcp:3000  //查看谁在使用这个端口
