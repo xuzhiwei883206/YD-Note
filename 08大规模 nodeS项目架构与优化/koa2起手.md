@@ -35,9 +35,9 @@
 	```
 5. pm2 start pm2.json可以启动
 
-6. koa路由，使用<font color=red>koa-simple-router</font>
+6. koa路由，使用<font color=#ff0000>koa-simple-router</font>
 	> https://www.npmjs.com/package/koa-simple-router
-7. <font color=red>supervisor</font> 服务器自动重启模块
+7. <font color=#ff0000>supervisor</font> 服务器自动重启模块
 
 	> npm i supervisor -g
 
@@ -81,7 +81,7 @@
 			并把username和phone放入ctx.body
 			```
 	2. 获取post请求
-		- 获取post请求需要使用<font color=red>koa-body</font>模块
+		- 获取post请求需要使用<font color=#ff0000>koa-body</font>模块
 		> 安装koa-body npm i koa-body --save
 
 		在app.js里加入如下代码：

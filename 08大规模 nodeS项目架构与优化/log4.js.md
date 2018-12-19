@@ -52,7 +52,7 @@ Properties:
     - object对象有两个属性：level value级别（整数）以及 colour颜色。
 
     - 日志级别用于分配日志消息的重要性，使用整数值来对其进行排序。如果您没有在配置中指定任何内容，则使用默认值：
-        - <font color=red>ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < MARK < OFF</font>（OFF是用来关闭日志记录的，不是日志记录的一个级别。如果使用了 OFF，则不需要调用 logger.off('some log message')来关闭日志。）
+        - <font color=#ff0000>ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < MARK < OFF</font>（OFF是用来关闭日志记录的，不是日志记录的一个级别。如果使用了 OFF，则不需要调用 logger.off('some log message')来关闭日志。）
     - 这里定义的级别除了默认级别外，还可以用整数值来确定它们与默认级别的关系。
 
       - 如果您定义的级别与默认级别相同，那么 config 中的整数值是优先级更高的。
