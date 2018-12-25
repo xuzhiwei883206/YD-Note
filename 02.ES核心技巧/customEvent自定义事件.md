@@ -21,4 +21,4 @@ dom.dispatchEvent(new CustomEvent('log-in',{
 
 浏览器支持度
 
-![浏览器支持度](./customEvent/1.png)
+![浏览器支持度](./imgs/customEvent/1.png)

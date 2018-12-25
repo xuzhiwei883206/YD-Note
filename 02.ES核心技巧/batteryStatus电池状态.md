@@ -34,4 +34,4 @@ if ('getBattery' in navigator) {
 
 这个浏览器的支持度很低。。。。
 
-![支持度](./batteryStatus/1.png)
+![支持度](./imgs/batteryStatus/1.png)

@@ -13,4 +13,4 @@ window.addEventListener('offline',offlineHandler)
 
 浏览器支持度
 
-![浏览器支持度](./onlinestate/1.png)
+![浏览器支持度](./imgs/onlinestate/1.png)

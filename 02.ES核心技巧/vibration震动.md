@@ -15,4 +15,4 @@ navigator.vibrate(0)
 
 浏览器支持度
 
-![浏览器支持度](./vibration/1.png)
+![浏览器支持度](./imgs/vibration/1.png)

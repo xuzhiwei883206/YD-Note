@@ -32,7 +32,7 @@ doc.execCommand('backColor',true,'red')
 
 我用这些命令简单的写了一个富文本的demo，大家可以看一下Demo，效果如下：
 
-![富文本](./execCommand/1.git)
+![富文本](./imgs/execCommand/1.git)
 
 
 浏览器支持度
