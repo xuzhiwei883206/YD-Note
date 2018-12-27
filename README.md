@@ -1,3 +1,2 @@
-# YD-Note
+# Initial page
 
-目录暂未整理
