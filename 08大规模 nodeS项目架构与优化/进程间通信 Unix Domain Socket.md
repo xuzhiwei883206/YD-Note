@@ -14,4 +14,4 @@ https://www.cnblogs.com/sparkdev/p/8359028.html
 IP socket
 
 > IP socket要利用主机的传输层(**tcp**)，可以用于同一台主机上不同进程间的通信，也可以用于网络上不同主机间的通信。
-  
+
