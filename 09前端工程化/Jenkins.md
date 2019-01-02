@@ -1,3 +1,60 @@
+#### 命令
+- sudo service jenkins start
+- sudo service jenkins stop
+- sudo service jenkins restart
+- sudo chkconfig jenkins on
+
+- http://localhost:8080/exit
+- http://localhost:8080/restart
+- http://localhost:8080/reload
+
+#### 安装
+```
+brew install jenkins
+```
+#### 执行
+```
+java -jar /usr/local/Cellar/jenkins/2.49/libexec/jenkins.war --httpPort=8080
+//2.49是指Jenkins的版本号
+访问8080端口即可看到界面
+```
+#### 链接launchd配置文件
+```
+ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+```
+#### 启动jenkins
+```
+ launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+```
+#### 停止jenkins
+```
+ launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
+```
+
+如果启动失败，可以运行如下命令查看错误信息
+
+> systemctl status jenkins.service
+
+如上错误是java配置错误，需要修改jenkins配置文件
+
+> vi /etc/rc.d/init.d/jenkins
+
+类似修改如下
+```
+candidates="
+************
+************
+/usr/local/jdk1.8/bin/java
+"
+```
+
+#### jenkins的默认设置  ( 配置文件：/etc/rc.d/init.d/jenkins )
+Jenkins会随系统启动而启动。详情参照/etc/init.d/jenkins
+- Jenkins会创建一个用户叫做jenkins, 如果你修改了user，则要修修改所属者：/var/log/jenkins,/var/lib/jenkins,/var/cache/jenkins
+- 如果遇到问题，查看日志/var/log/jenkins/jenkins.log
+- 配置文件/etc/sysconfig/jenkins
+- 默认启用8080   ---开启非80端口需要打开防火墙，参考：http://www.cnblogs.com/rslai/p/7954080.html
+
 #### 相关概念
 
 Jenkins是一个功能强大的应用程序，允许持续集成和持续交付项目，无论用的是什么平台。这是一个免费的源代码，可以处理任何类型的构建或持续集成。集成Jenkins可以用于一些测试和部署技术。Jenkins是一种软件允许持续集成。

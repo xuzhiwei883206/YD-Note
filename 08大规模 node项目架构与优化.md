@@ -5,13 +5,21 @@
 4. 框架+node 用node实现真路由，框架是假路由(去模板法)
 
 #### 上线部署
+```
 ps aux|grep node  //查看node进程谁在用
+
 lsof -i tcp:3000  //查看谁在使用这个端口
+
 kill -9 pid       //关闭进程
+
 ssh 用户名@地址（免密登录）
+
 scp course-map.json root@IP地址：/路径
+
 scp -r advace/root@101200.185.250:/opt/node-publish/www/static
+
 unzip 压缩文件名
+```
 
 #### Node
 - Node.js的本质是一个Javascript的解释器
