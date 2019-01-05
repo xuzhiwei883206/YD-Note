@@ -92,3 +92,7 @@ ui测试  backstop  phantomjs
 代码覆盖率 karma-coverage karma
 
 
+#### 补充 
+[Nightmare](https://github.com/ruanyf/jstraining/blob/master/demos/README.md#rest-api)
+
+
